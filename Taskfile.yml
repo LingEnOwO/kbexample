@@ -74,7 +74,7 @@ tasks:
   db:apply:
     desc: Ensure any changes in the schema.sql file are applied to the dev database
     cmds:
-      - atlas schema apply --to file://schema.sql --url "postgresql:///kb_example_dev" --dev-url "postgresql:///atlas_dev"
+      - atlas schema apply --auto-approve --to file://schema.sql --url "postgresql:///kbexample_dev" --dev-url "postgresql:///atlas_dev"
 
   db:gen-migration:
     desc: Create a migration file based on the changes made to schema.sql
